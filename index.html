@@ -3,156 +3,209 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Let's Go 樂果美式營隊 | 兒童運動英文冬令營・夏令營</title>
-<meta name="description" content="樂果 Let's Go 每年寒暑假舉辦美式兒童運動英文營隊：運動訓練、英語、品格教育，師生比 1:5，國際師資與台灣隊輔共同帶領。">
-<meta property="og:title" content="Let's Go 樂果美式營隊">
-<meta property="og:description" content="美式冬令營・夏令營：運動、英文、品格。">
-<meta property="og:image" content="img/winter-group.png">
+<title>Let's Go 樂果美式營隊 | 2027 運動英文冬令營</title>
+<meta name="description" content="2027 Let's Go 運動英文冬令營：運動 × 英文 × 品格。中和場 1/25–1/29、林口場 2/1–2/3，外籍師資與台灣隊輔共同帶領。">
+<meta property="og:title" content="Let's Go 樂果 — 2027 Winter Camp">
+<meta property="og:description" content="Sports × English × Character. 2027 冬令營現正招生。">
+<meta property="og:image" content="https://maptap123.github.io/lets-go-site/img/winter-group.png">
 <link rel="icon" href="img/emblem.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Noto+Sans+TC:wght@400;500;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="top">
-  <a class="brand" href="#top"><img src="img/emblem.png" alt="" width="44" height="44"><img src="img/logo.png" alt="Let's Go 樂果" height="40"></a>
-  <nav>
+<header class="top" id="header">
+  <a class="brand" href="#top" aria-label="Let's Go 樂果">
+    <img class="emblem" src="img/emblem.png" alt="" width="46" height="46">
+    <img class="wordmark" src="img/logo.png" alt="Let's Go" height="34">
+  </a>
+  <nav id="nav">
+    <a href="#camps"><span data-zh>冬令營</span><span data-en>Winter Camp</span></a>
     <a href="#about"><span data-zh>關於我們</span><span data-en>About</span></a>
-    <a href="#camps"><span data-zh>營隊</span><span data-en>Camps</span></a>
     <a href="#day"><span data-zh>一日行程</span><span data-en>A Day at Camp</span></a>
     <a href="#photos"><span data-zh>花絮</span><span data-en>Photos</span></a>
-    <a href="#movement"><span data-zh>主辦單位</span><span data-en>Our Organization</span></a>
-    <a href="#contact" class="cta"><span data-zh>聯繫我們</span><span data-en>Contact</span></a>
-    <button id="lang" type="button" aria-label="Switch language">EN</button>
+    <a href="#movement"><span data-zh>主辦單位</span><span data-en>Organization</span></a>
+    <a href="#contact"><span data-zh>聯繫我們</span><span data-en>Contact</span></a>
   </nav>
+  <div class="actions">
+    <button id="lang" type="button" aria-label="Switch language">EN</button>
+    <a class="signup" href="https://forms.gle/btUkq71SNn66UHAV9" target="_blank" rel="noopener"><span data-zh>立即報名</span><span data-en>Sign Up</span></a>
+  </div>
 </header>
 
 <main id="top">
+
+<!-- HERO -->
 <section class="hero">
-  <img class="hero-bg" src="img/basketball.jpg" alt="">
+  <div class="hero-shapes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
   <div class="hero-in">
-    <p class="tag"><span data-zh>樂果美式營隊</span><span data-en>Let's Go American-style Camps</span></p>
-    <h1>Let's Go.<br>Have Fun.</h1>
-    <p class="lead"><span data-zh>每年寒暑假，讓孩子在運動中開口說英文、建立自信與品格。</span><span data-en>Every winter and summer, kids speak English, build confidence and grow in character through sports.</span></p>
-    <div class="btns">
-      <a class="btn primary" href="#camps"><span data-zh>查看營隊資訊</span><span data-en>See Camp Info</span></a>
-      <a class="btn ghost" href="https://forms.gle/LwqFpt5jwU1gLBBP9" target="_blank" rel="noopener"><span data-zh>立即報名</span><span data-en>Sign Up</span></a>
+    <div class="hero-copy">
+      <p class="eyebrow rise" style="--d:.1s"><span data-zh>2027 樂果美式兒童營會</span><span data-en>2027 Let's Go American Kids' Camp</span></p>
+      <h1 class="rise" style="--d:.25s">Winter<br>Camp <em>2027</em></h1>
+      <p class="script rise" style="--d:.45s">Seeds for a Better Tomorrow</p>
+      <p class="lead rise" style="--d:.6s"><span data-zh>Sports × English × Character<br>這個寒假，讓孩子在運動中學英文、在團隊合作中建立自信。</span><span data-en>Sports × English × Character<br>This winter, kids learn English through sport and build confidence through teamwork.</span></p>
+      <div class="btns rise" style="--d:.75s">
+        <a class="btn lime" href="https://forms.gle/btUkq71SNn66UHAV9" target="_blank" rel="noopener"><span data-zh>立即報名</span><span data-en>Sign Up Now</span></a>
+        <a class="btn ghost" href="#camps"><span data-zh>日期與費用</span><span data-en>Dates & Prices</span></a>
+      </div>
+      <p class="countdown rise" style="--d:.9s" id="countdown" hidden></p>
     </div>
-    <ul class="pills"><li><span data-zh>美式風格</span><span data-en>American style</span></li><li><span data-zh>品格教育</span><span data-en>Character</span></li><li><span data-zh>運動訓練</span><span data-en>Sports training</span></li></ul>
+    <div class="hero-photo rise" style="--d:.4s">
+      <img src="img/kids-ball.jpg" alt="Two Let's Go campers with a basketball" width="800" height="533">
+      <span class="sticker"><span data-zh>現正招生</span><span data-en>Now enrolling</span></span>
+    </div>
   </div>
 </section>
 
-<section id="about" class="navy">
-  <div class="wrap split">
-    <div>
-      <h2><span data-zh>關於我們</span><span data-en>About Us</span></h2>
-      <div data-zh>
-        <p>成立樂果運動是為了提供台灣兒童、青少年一個安全、容錯的運動環境，鼓勵孩子英語口說、自信表達。</p>
-        <p>藉由團隊運動成為媒介，邀請國際師資與豐富經驗的台灣隊輔老師合作，我們不單單只是教孩子打球而已，我們更注重孩子在品格態度上的成長。</p>
-        <p class="quote">用生命影響生命，建立新一世代的榜樣與領袖。</p>
-      </div>
-      <div data-en>
-        <p>Let's Go Sports (樂果運動) exists to give Taiwanese children and teens a safe sports environment where mistakes are okay, encouraging them to speak English and express themselves with confidence.</p>
-        <p>Using team sports as the medium, international teachers work alongside experienced Taiwanese team leaders. We teach more than ball skills — we care about growth in character and attitude.</p>
-        <p class="quote">Life touching life, building a new generation of role models and leaders.</p>
-      </div>
-    </div>
-    <figure class="frame"><img src="img/summer-group.jpg" alt="Let's Go camp group photo" loading="lazy"></figure>
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Learn</span><b>✦</b><span>Move</span><b>✦</b><span>Grow</span><b>✦</b><span>Together</span><b>✦</b>
+    <span>Learn</span><b>✦</b><span>Move</span><b>✦</b><span>Grow</span><b>✦</b><span>Together</span><b>✦</b>
+    <span>Learn</span><b>✦</b><span>Move</span><b>✦</b><span>Grow</span><b>✦</b><span>Together</span><b>✦</b>
+    <span>Learn</span><b>✦</b><span>Move</span><b>✦</b><span>Grow</span><b>✦</b><span>Together</span><b>✦</b>
   </div>
-</section>
+</div>
 
+<!-- CAMPS -->
 <section id="camps">
   <div class="wrap">
-    <h2><span data-zh>美式兒童營隊</span><span data-en>American-style Kids' Camps</span></h2>
-    <p class="sub"><span data-zh>每年寒暑假舉辦美式冬、夏令營</span><span data-en>Winter and summer camps held every school vacation</span></p>
+    <p class="kicker reveal"><span data-zh>2027 冬令營</span><span data-en>Winter Camp 2027</span></p>
+    <h2 class="reveal"><span data-zh>選擇你的場次</span><span data-en>Choose Your Session</span></h2>
+    <p class="sub reveal"><span data-zh>招生對象：國小 3–6 年級　·　小班制，名額有限，額滿為止</span><span data-en>Grades 3–6 · Small classes, limited spots, first come first served</span></p>
 
     <div class="cards">
-      <article class="card winter">
-        <span class="badge"><span data-zh>寒假</span><span data-en>Winter</span></span>
-        <h3><span data-zh>冬令營</span><span data-en>Winter Camp</span></h3>
-        <p><span data-zh>每年寒假於台灣各地校園舉辦，為期一週。以美式風格的運動、英文閱讀、手工藝與歌唱，帶孩子度過充實又溫暖的寒假。</span><span data-en>Held each year on school campuses around Taiwan over winter break, one week long. American-style sports, English reading, crafts and singing make for a full and warm vacation.</span></p>
-        <p class="note"><span data-zh>最新梯次與日期將公告於 LINE 官方帳號、Facebook 與 Instagram。</span><span data-en>Dates and locations are announced on our LINE official account, Facebook and Instagram.</span></p>
-        <a class="btn primary small" href="https://forms.gle/LwqFpt5jwU1gLBBP9" target="_blank" rel="noopener"><span data-zh>報名 / 詢問</span><span data-en>Sign up / Ask</span></a>
+      <article class="card reveal" data-start="2027-01-25">
+        <span class="badge"><span data-zh>中和場</span><span data-en>Zhonghe</span></span>
+        <p class="dates">1/25 – 1/29</p>
+        <p class="days"><span data-zh>週一至週五・5 天</span><span data-en>Mon–Fri · 5 days</span></p>
+        <ul>
+          <li>📍 <span data-zh>中和國小</span><span data-en>Zhonghe Elementary School</span></li>
+          <li>🎒 <span data-zh>國小 3–6 年級</span><span data-en>Grades 3–6</span></li>
+        </ul>
+        <p class="price"><small><span data-zh>報名費用</span><span data-en>Tuition</span></small> NT$7,500</p>
+        <a class="btn lime small" href="https://forms.gle/btUkq71SNn66UHAV9" target="_blank" rel="noopener"><span data-zh>報名中和場</span><span data-en>Sign up — Zhonghe</span></a>
       </article>
-      <article class="card summer">
-        <span class="badge"><span data-zh>暑假</span><span data-en>Summer</span></span>
-        <h3><span data-zh>夏令營</span><span data-en>Summer Camp</span></h3>
-        <p><span data-zh>暑假多個梯次、多個地點（例如 2026 年的林口、中和、台中西屯梯次）。同樣的課程精神，更多戶外運動時間。</span><span data-en>Multiple sessions and locations each summer (in 2026: Linkou, Zhonghe and Taichung Xitun). The same spirit, with more time outdoors.</span></p>
-        <p class="note"><span data-zh>2027 年夏令營報名即將公布。</span><span data-en>2027 summer registration will be announced soon.</span></p>
-        <a class="btn primary small" href="https://line.me/R/ti/p/@130scmma" target="_blank" rel="noopener"><span data-zh>加入 LINE 搶先知道</span><span data-en>Get updates on LINE</span></a>
+      <article class="card reveal" data-start="2027-02-01" style="--rd:.12s">
+        <span class="badge"><span data-zh>林口場</span><span data-en>Linkou</span></span>
+        <p class="dates">2/1 – 2/3</p>
+        <p class="days"><span data-zh>週一至週三・3 天</span><span data-en>Mon–Wed · 3 days</span></p>
+        <ul>
+          <li>📍 <span data-zh>林口高中</span><span data-en>Linkou High School</span></li>
+          <li>🎒 <span data-zh>國小 3–6 年級</span><span data-en>Grades 3–6</span></li>
+        </ul>
+        <p class="price"><small><span data-zh>報名費用</span><span data-en>Tuition</span></small> NT$5,200</p>
+        <a class="btn lime small" href="https://forms.gle/btUkq71SNn66UHAV9" target="_blank" rel="noopener"><span data-zh>報名林口場</span><span data-en>Sign up — Linkou</span></a>
       </article>
     </div>
+    <p class="fine reveal"><span data-zh>早鳥與「好友同行」優惠請洽 LINE 官方帳號詢問最新方案。</span><span data-en>Ask on our LINE account about early-bird and bring-a-friend offers.</span></p>
 
-    <ul class="facts">
-      <li><strong>1:5</strong><span data-zh>師生比，每位孩子都被照顧到</span><span data-en>teacher-to-student ratio</span></li>
-      <li><strong>台＋美</strong><span data-zh>台美老師同組，溝通更流暢</span><span data-en>Taiwanese and American teachers in every group</span></li>
-      <li><strong>5 days</strong><span data-zh>為期一週的密集體驗</span><span data-en>one immersive week</span></li>
-      <li><strong>EN</strong><span data-zh>以英語進行，不限英文程度</span><span data-en>run in English — any level welcome</span></li>
+    <h3 class="center reveal feat-title"><span data-zh>營隊四大特色</span><span data-en>Four Things That Make Our Camp Special</span></h3>
+    <ul class="features">
+      <li class="reveal"><span class="ico">🎮</span><h4><span data-zh>動靜態遊戲化課程</span><span data-en>Playful active &amp; quiet lessons</span></h4><p><span data-zh>結合多元運動與趣味英文活動，讓孩子邊玩邊學。</span><span data-en>Varied sports and fun English activities — learning through play.</span></p></li>
+      <li class="reveal" style="--rd:.08s"><span class="ico">👥</span><h4><span data-zh>小班制教學</span><span data-en>Small classes</span></h4><p><span data-zh>冬令營師生比約 1:10，重視每位孩子的參與及學習體驗。</span><span data-en>About 1:10 teacher-to-student ratio, so every child takes part.</span></p></li>
+      <li class="reveal" style="--rd:.16s"><span class="ico">🏀</span><h4><span data-zh>專業教練運動訓練</span><span data-en>Pro coach sports training</span></h4><p><span data-zh>培養基礎運動能力、身體協調與團隊合作精神。</span><span data-en>Builds basic athletic skill, coordination and teamwork.</span></p></li>
+      <li class="reveal" style="--rd:.24s"><span class="ico">🌍</span><h4><span data-zh>外籍師資合作教學</span><span data-en>International teachers</span></h4><p><span data-zh>創造自然使用英文的環境，鼓勵孩子勇敢開口、自信表達。</span><span data-en>A natural English environment that encourages kids to speak up.</span></p></li>
     </ul>
-    <p class="center"><span data-zh>想體驗台灣最美式教育與環境的孩子，只要符合年齡資格，我們都歡迎你來參加。是營隊，也是愛與生命的希望工程。</span><span data-en>Any child who meets the age requirement and wants to experience the most American-style learning environment in Taiwan is welcome. It's a camp — and a project of love, life and hope.</span></p>
+
+    <div class="summer reveal">
+      <div><h3><span data-zh>夏令營</span><span data-en>Summer Camp</span></h3>
+      <p><span data-zh>每年暑假在林口、中和、台中等地舉辦（2026 為 7/20–8/7 三個梯次）。2027 夏令營資訊公布後，第一時間通知你。</span><span data-en>Held every summer in Linkou, Zhonghe and Taichung (2026: three weeks, 7/20–8/7). We'll announce 2027 dates as soon as they're set.</span></p></div>
+      <a class="btn ghost dark" href="https://line.me/R/ti/p/@130scmma" target="_blank" rel="noopener"><span data-zh>加入 LINE 搶先知道</span><span data-en>Get updates on LINE</span></a>
+    </div>
   </div>
 </section>
 
-<section id="day" class="light">
-  <div class="wrap split rev">
-    <figure class="frame"><img src="img/classroom.jpg" alt="Kids in a Let's Go classroom" loading="lazy"></figure>
+<!-- ABOUT -->
+<section id="about" class="green">
+  <div class="wrap split">
     <div>
-      <h2><span data-zh>一日行程</span><span data-en>A Day at Camp</span></h2>
-      <div data-zh>
-        <p>每日行程都經過詳細安排：從早上的英文閱讀開啟一整天，一週當中每天都有不同的動態、靜態課程。</p>
+      <p class="kicker reveal"><span data-zh>關於我們</span><span data-en>About Us</span></p>
+      <h2 class="reveal"><span data-zh>以運動連結人，<br>以教育影響生命。</span><span data-en>Connecting people through sport,<br>shaping lives through education.</span></h2>
+      <div data-zh class="reveal">
+        <p>成立樂果運動是為了提供台灣兒童、青少年一個安全、容錯的運動環境，鼓勵孩子英語口說、自信表達。</p>
+        <p>藉由團隊運動成為媒介，邀請國際師資與豐富經驗的台灣隊輔老師合作，我們不單單只是教孩子打球而已，我們更注重孩子在品格態度上的成長。</p>
+        <p class="script-q">用生命影響生命，建立新一世代的榜樣與領袖。</p>
+      </div>
+      <div data-en class="reveal">
+        <p>Let's Go Sports (樂果運動) exists to give Taiwanese children and teens a safe sports environment where mistakes are okay, encouraging them to speak English and express themselves with confidence.</p>
+        <p>Using team sports as the medium, international teachers work alongside experienced Taiwanese team leaders. We teach more than ball skills — we care about growth in character and attitude.</p>
+        <p class="script-q">Life touching life, building a new generation of role models and leaders.</p>
+      </div>
+    </div>
+    <figure class="frame reveal tilt"><img src="img/summer-group.jpg" alt="Let's Go camp group photo" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- DAY -->
+<section id="day" class="cream">
+  <div class="wrap split rev">
+    <figure class="frame reveal tilt"><img src="img/classroom.jpg" alt="Kids in a Let's Go classroom" loading="lazy"></figure>
+    <div>
+      <p class="kicker reveal"><span data-zh>營隊日常</span><span data-en>Camp Life</span></p>
+      <h2 class="reveal"><span data-zh>一日行程</span><span data-en>A Day at Camp</span></h2>
+      <div data-zh class="reveal">
+        <p>每日行程都經過詳細安排：從早上的英文閱讀開啟一整天，每天都有不同的動態、靜態課程。</p>
         <ul class="checks"><li>英文閱讀與英語課程</li><li>運動訓練：籃球、足球、跑步與團隊遊戲</li><li>手工藝、英語歌唱</li><li>每項活動最後由老師帶領反思與分享</li></ul>
       </div>
-      <div data-en>
-        <p>Every day is carefully planned: it starts with English reading, and each day of the week mixes active and quiet sessions.</p>
+      <div data-en class="reveal">
+        <p>Every day is carefully planned: it starts with English reading, and each day mixes active and quiet sessions.</p>
         <ul class="checks"><li>English reading and lessons</li><li>Sports training: basketball, football, running and team games</li><li>Crafts and English songs</li><li>Each activity ends with guided reflection</li></ul>
       </div>
     </div>
   </div>
 </section>
 
+<!-- PHOTOS -->
 <section id="photos">
   <div class="wrap">
-    <h2><span data-zh>營隊花絮</span><span data-en>Camp Moments</span></h2>
-    <ul class="words"><li>創作</li><li>歡樂</li><li>球技</li><li>陪伴</li><li>團隊</li><li>友誼</li><li>品格</li></ul>
+    <p class="kicker reveal"><span data-zh>營隊花絮</span><span data-en>Camp Moments</span></p>
+    <h2 class="reveal"><span data-zh>創作・歡樂・球技・陪伴<br>團隊・友誼・品格</span><span data-en>Creativity, joy, skill, friendship,<br>teamwork and character</span></h2>
     <div class="gallery">
-      <img src="img/winter-group.png" alt="Winter camp group photo" loading="lazy">
-      <img src="img/kids-ball.jpg" alt="Two campers with a basketball" loading="lazy">
-      <img src="img/coach-kids.jpg" alt="Counselor with campers" loading="lazy">
-      <img src="img/games.jpg" alt="Outdoor games" loading="lazy">
-      <img src="img/teacher.jpg" alt="Teacher leading a lesson" loading="lazy">
-      <img src="img/huddle.jpg" alt="Team huddle" loading="lazy">
+      <img class="reveal" src="img/winter-group.png" alt="Winter camp group photo" loading="lazy">
+      <img class="reveal" src="img/coach-kids.jpg" alt="Counselor with campers" loading="lazy" style="--rd:.08s">
+      <img class="reveal" src="img/games.jpg" alt="Outdoor games" loading="lazy" style="--rd:.16s">
+      <img class="reveal" src="img/teacher.jpg" alt="Teacher leading a lesson" loading="lazy">
+      <img class="reveal" src="img/huddle.jpg" alt="Team huddle" loading="lazy" style="--rd:.08s">
+      <img class="reveal" src="img/basketball.jpg" alt="Basketball drills" loading="lazy" style="--rd:.16s">
     </div>
   </div>
 </section>
 
-<section id="movement" class="navy">
+<!-- MOVEMENT -->
+<section id="movement" class="green">
   <div class="wrap narrow">
-    <h2><span data-zh>主辦單位：撒種行動協會</span><span data-en>Run by The Sowers Movement</span></h2>
-    <div data-zh>
+    <p class="kicker reveal"><span data-zh>主辦單位</span><span data-en>Our Organization</span></p>
+    <h2 class="reveal"><span data-zh>撒種行動協會</span><span data-en>The Sowers Movement</span></h2>
+    <div data-zh class="reveal">
       <p>Let's Go 營隊由<strong>撒種行動協會（The Sowers Movement）</strong>舉辦。這是一個在台灣登記立案的非營利組織，透過英文、故事、詩歌與運動陪伴台灣的孩子。</p>
       <p>營隊由海外母語人士團隊與台灣在地志工共同組成：海外老師負責教學與帶領，台灣夥伴負責翻譯、行政與家長聯繫。多數志工為無償服事，讓營隊費用得以維持親民。</p>
       <p>撒種行動協會不隸屬單一教會，並與台灣在地教會合作。課程包含聖經故事與敬拜，孩子可自由選擇是否參與，我們不會給孩子任何壓力。</p>
     </div>
-    <div data-en>
+    <div data-en class="reveal">
       <p>Let's Go camps are run by <strong>The Sowers Movement (撒種行動協會)</strong>, a registered Taiwanese non-profit that walks alongside children through English, story, song and sport.</p>
       <p>Camps are staffed by overseas native English-speaking teams and local Taiwanese volunteers: visitors teach and coach; Taiwanese partners interpret, organize and stay in touch with families. Most volunteers are unpaid, which keeps camp costs low.</p>
       <p>The Sowers Movement is independent of any single denomination and works with local Taiwanese churches. Lessons include Bible stories and worship; children are free to join in, and no child is pressured.</p>
     </div>
-    <div class="btns">
-      <a class="btn primary" href="https://sowersmovement.org/" target="_blank" rel="noopener"><span data-zh>了解撒種行動協會</span><span data-en>Visit sowersmovement.org</span></a>
-      <a class="btn ghost" href="https://sowersmovement.org/en/about/" target="_blank" rel="noopener"><span data-zh>成為志工 (英文)</span><span data-en>Volunteer with us</span></a>
+    <div class="btns reveal">
+      <a class="btn lime" href="https://sowersmovement.org/" target="_blank" rel="noopener"><span data-zh>了解撒種行動協會</span><span data-en>Visit sowersmovement.org</span></a>
+      <a class="btn ghost" href="https://sowersmovement.org/en/about/" target="_blank" rel="noopener"><span data-zh>成為志工（英文）</span><span data-en>Volunteer with us</span></a>
     </div>
   </div>
 </section>
 
-<section id="contact">
+<!-- CONTACT -->
+<section id="contact" class="cream">
   <div class="wrap narrow center">
-    <h2><span data-zh>聯繫我們</span><span data-en>Contact Us</span></h2>
-    <p><span data-zh>歡迎加入 LINE 官方帳號詢問營隊細節、最新梯次與報名方式。</span><span data-en>Message us on LINE for camp details, new sessions and registration.</span></p>
-    <div class="btns c">
+    <p class="kicker reveal"><span data-zh>聯繫我們</span><span data-en>Contact Us</span></p>
+    <h2 class="reveal"><span data-zh>有問題嗎？LINE 問我們</span><span data-en>Questions? Message us on LINE</span></h2>
+    <p class="reveal"><span data-zh>營隊細節、最新梯次、優惠方案與報名方式，歡迎隨時詢問。</span><span data-en>Camp details, new sessions, discounts and registration — ask anytime.</span></p>
+    <div class="btns c reveal">
       <a class="btn line" href="https://line.me/R/ti/p/@130scmma" target="_blank" rel="noopener">LINE @130scmma</a>
-      <a class="btn primary" href="https://forms.gle/LwqFpt5jwU1gLBBP9" target="_blank" rel="noopener"><span data-zh>線上報名表</span><span data-en>Registration form</span></a>
+      <a class="btn green-btn" href="https://forms.gle/btUkq71SNn66UHAV9" target="_blank" rel="noopener"><span data-zh>2027 冬令營報名表</span><span data-en>Winter 2027 registration form</span></a>
     </div>
-    <p class="social">
+    <p class="social reveal">
       <a href="https://www.facebook.com/profile.php?id=100090982684069" target="_blank" rel="noopener">Facebook</a> ·
       <a href="https://www.instagram.com/letsgosports_2022/" target="_blank" rel="noopener">Instagram @letsgosports_2022</a>
     </p>
@@ -161,7 +214,8 @@
 </main>
 
 <footer>
-  <img src="img/wordmark-zh.png" alt="樂果" height="36" class="inv">
+  <img src="img/emblem.png" alt="" width="54" height="54">
+  <p class="script">Seeds for a Better Tomorrow</p>
   <p>© 2026 Let's Go Sports 樂果運動 · <a href="https://sowersmovement.org/" target="_blank" rel="noopener">The Sowers Movement 撒種行動協會</a></p>
 </footer>
 
