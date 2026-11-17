@@ -5,7 +5,8 @@
   --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:80px}
+html{scroll-behavior:smooth;scroll-padding-top:80px;overflow-x:clip}
+body{overflow-x:clip}
 body{margin:0;font-family:var(--sans);color:var(--ink);background:#fff;line-height:1.8;font-size:17px;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -43,7 +44,7 @@ html[lang="zh-Hant"] [data-en],html[lang="en"] [data-zh]{display:none!important}
 .eyebrow{display:inline-block;margin:0 0 18px;font-weight:900;letter-spacing:.06em;color:var(--lime)}
 .hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(54px,9.5vw,118px);line-height:.98;letter-spacing:-.02em;margin:0;text-shadow:0 5px 0 rgba(0,0,0,.25)}
 .hero h1 em{font-style:normal;color:var(--lime)}
-.script{font-family:var(--script);font-size:clamp(32px,4.5vw,54px);color:var(--lime);margin:.2em 0 .4em;line-height:1.1}
+.script{font-family:var(--script);font-size:clamp(32px,4.5vw,54px);color:var(--lime);margin:.45em 0 .4em;line-height:1.1}
 .lead{font-size:19px;max-width:520px;margin:0}
 .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btns.c{justify-content:center}
 .btn{display:inline-block;padding:14px 28px;border-radius:99px;font-weight:900;text-decoration:none;border:2px solid transparent;transition:transform .2s,box-shadow .2s,background .2s}
@@ -82,7 +83,7 @@ html[lang="zh-Hant"] [data-en],html[lang="en"] [data-zh]{display:none!important}
 .js .tilt.reveal.in{transform:rotate(-1.5deg)}
 
 /* marquee */
-.marquee{background:var(--lime);color:var(--green2);overflow:hidden;white-space:nowrap;padding:12px 0;transform:rotate(-1deg);margin:-14px -10px 0;position:relative;z-index:3;box-shadow:0 8px 0 rgba(0,0,0,.12)}
+.marquee{background:var(--lime);color:var(--green2);overflow:hidden;white-space:nowrap;padding:12px 0;transform:rotate(-1deg) scaleX(1.03);margin:-14px 0 0;position:relative;z-index:3;box-shadow:0 8px 0 rgba(0,0,0,.12)}
 .track{display:inline-flex;gap:26px;animation:scroll 22s linear infinite;font-family:var(--serif);font-size:26px;font-weight:900;font-style:italic}
 .track b{font-style:normal;font-size:18px;align-self:center}
 @keyframes scroll{to{transform:translateX(-50%)}}
