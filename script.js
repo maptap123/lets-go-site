@@ -49,3 +49,49 @@
   try { saved = localStorage.getItem('lang'); } catch (e) {}
   setLang(saved === 'en' ? 'en' : 'zh');
 })();
+
+/* Meta Pixel events — does not alter navigation */
+(function () {
+  function track(name) {
+    try {
+      if (typeof window.fbq === 'function') window.fbq('track', name);
+    } catch (e) {}
+  }
+
+  document.addEventListener('click', function (ev) {
+    var t = ev.target;
+    if (!t) return;
+    if (t.nodeType !== 1) t = t.parentElement;
+    if (!t || !t.closest) return;
+    var el = t.closest('a, button');
+    if (!el) return;
+
+    var href = (el.getAttribute('href') || '').toLowerCase();
+    var text = (el.textContent || '');
+    var lead = href.indexOf('forms.gle') !== -1
+      || href.indexOf('docs.google.com/forms') !== -1
+      || text.indexOf('報名') !== -1;
+    var contact = href.indexOf('line.me') !== -1
+      || href.indexOf('lin.ee') !== -1
+      || href.indexOf('@130scmma') !== -1
+      || text.toLowerCase().indexOf('@130scmma') !== -1;
+
+    if (lead) track('Lead');
+    if (contact) track('Contact');
+  });
+
+  var camps = document.getElementById('camps');
+  if (!camps || !('IntersectionObserver' in window)) return;
+  var seen = false;
+  var io = new IntersectionObserver(function (entries) {
+    if (seen) return;
+    for (var i = 0; i < entries.length; i++) {
+      if (!entries[i].isIntersecting) continue;
+      seen = true;
+      track('ViewContent');
+      io.disconnect();
+      break;
+    }
+  }, { threshold: 0 });
+  io.observe(camps);
+})();
