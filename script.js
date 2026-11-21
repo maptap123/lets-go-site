@@ -1,3 +1,20 @@
+/* Phone visitors keep the poster. The hero video is only attached on a wide screen. */
+(function () {
+  var video = document.querySelector('.hero-video');
+  if (!video) return;
+  var wide = window.matchMedia('(min-width: 901px)');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function arm() {
+    if (!wide.matches || reduce.matches || video.getAttribute('src')) return;
+    video.src = 'hero-bg.mp4';
+    video.addEventListener('playing', function () { video.classList.add('is-playing'); });
+    var play = video.play();
+    if (play && play.catch) play.catch(function () {});
+  }
+  arm();
+  if (wide.addEventListener) wide.addEventListener('change', arm);
+})();
+
 (function () {
   var html = document.documentElement;
   html.classList.add('js');
